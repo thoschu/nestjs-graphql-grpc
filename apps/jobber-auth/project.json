@@ -39,6 +39,11 @@
       "options": {
         "passWithNoTests": true
       }
+    },
+    "e2e": {
+      "options": {
+        "passWithNoTests": true
+      }
     }
   }
 }

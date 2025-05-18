@@ -38,6 +38,13 @@
         "targetName": "test"
       },
       "exclude": ["apps/jobber-auth-e2e/**/*"]
+    },
+    {
+      "plugin": "@nx/jest/plugin",
+      "options": {
+        "targetName": "e2e"
+      },
+      "exclude": ["apps/jobber-auth/**/*"]
     }
   ]
 }

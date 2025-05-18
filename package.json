@@ -2,7 +2,18 @@
   "name": "@jobber/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "",
+    "test": "npx nx run-many --targets test",
+    "lint": "npx nx run-many --targets test",
+    "jobber-auth:build": "npx nx build jobber-auth",
+    "jobber-auth:lint": "npx nx lint jobber-auth",
+    "jobber-auth:serve": "npx nx serve jobber-auth",
+    "jobber-auth:run-dist": "node dist/apps/jobber-auth/main.js",
+    "jobber-auth:test": "npx nx test jobber-auth",
+    "jobber-auth:e2e": "npx nx e2e jobber-auth-e2e",
+    "rimraf:dist": "npx rimraf dist"
+  },
   "private": true,
   "dependencies": {
     "@nestjs/common": "^10.0.2",
