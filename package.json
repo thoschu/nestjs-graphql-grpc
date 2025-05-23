@@ -24,7 +24,7 @@
     "rimraf:dist": "npx rimraf dist",
     "rimraf:node_modules": "npx rimraf node_modules",
     "rimraf:prisma:migrations": "npx rimraf apps/jobber-auth/prisma/migrations",
-    "postinstall": "npm run jobber-auth:generate-types"
+    "postinstall": "npx playwright install"
   },
   "private": true,
   "dependencies": {
