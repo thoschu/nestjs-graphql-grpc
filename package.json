@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "i": "npm i",
-    "start": "npx concurrently 'npm run jobber-auth:serve' 'npm run jobber:serve'",
+    "start": "npx concurrently 'npm run api:jobber-auth:serve' 'npm run app:jobber:serve'",
     "test": "npx nx run-many --targets test",
     "lint": "npx nx run-many --targets test",
     "e2e": "npx nx run-many --targets e2e",
