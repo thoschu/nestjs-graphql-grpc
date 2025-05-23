@@ -44,6 +44,24 @@
       "options": {
         "passWithNoTests": true
       }
+    },
+    "generate-types": {
+      "command": "prisma generate",
+      "options": {
+        "cwd": "apps/jobber-auth"
+      }
+    },
+    "migrate-prisma-postgres": {
+      "command": "prisma migrate dev -n users",
+      "options": {
+        "cwd": "apps/jobber-auth"
+      }
+    },
+    "push-prisma-mongodb": {
+      "command": "prisma db push",
+      "options": {
+        "cwd": "apps/jobber-auth"
+      }
     }
   }
 }
