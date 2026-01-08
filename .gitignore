@@ -40,3 +40,13 @@ Thumbs.db
 
 .nx/cache
 .nx/workspace-data
+
+.angular
+
+combined.log
+error.log
+test-results
+apps/jobber-auth/generated/
+apps/jobber-auth/prisma/migrations/
+localhost+2.pem
+localhost+2-key.pem

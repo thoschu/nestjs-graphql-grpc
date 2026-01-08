@@ -65,6 +65,57 @@
       "options": {
         "passWithNoTests": true
       }
+    },
+    "serve-static": {
+      "executor": "@jobber-workspace/jobber-plugin:run",
+      "options": {
+        "cmd": "start",
+        "config": {
+          "app": "dist/apps/jobber-auth",
+          "params": "-i -1 --wait-ready"
+        }
+      }
+    },
+    "delete-serve-static": {
+      "executor": "@jobber-workspace/jobber-plugin:run",
+      "dependsOn": ["stop"],
+      "options": {
+        "cmd": "delete",
+        "config": {
+          "app": "jobber-auth"
+        }
+      }
+    },
+    "stop": {
+      "executor": "@jobber-workspace/jobber-plugin:run",
+      "options": {
+        "cmd": "stop",
+        "config": {
+          "app": "jobber-auth"
+        }
+      }
+    },
+    "logs-serve-static": {
+      "executor": "@jobber-workspace/jobber-plugin:run",
+      "options": {
+        "cmd": "logs",
+        "config": {
+          "app": "jobber-auth"
+        }
+      }
+    },
+    "prisma:generate-types": {
+      "command": "prisma generate",
+      "options": {
+        "cwd": "apps/jobber-auth"
+      }
+    },
+    "prisma:migrate": {
+      "command": "prisma migrate dev",
+      "dependsOn": ["prisma:generate-types"],
+      "options": {
+        "cwd": "apps/jobber-auth"
+      }
     }
   }
 }

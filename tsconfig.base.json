@@ -14,7 +14,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@jobber-workspace/jobber-plugin": ["tools/jobber-plugin/src/index.ts"],
+      "@jobber-workspace/swagger-utils": ["libs/swagger-utils/src/index.ts"],
+      "@jobber-workspace/trpc-app-router": ["apps/jobber-trpc/src/index.ts"],
+      "@jobber-workspace/trpc-client": ["libs/trpc-client/src/index.ts"],
+      "@jobber-workspace/nestjs": ["libs/nestjs/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
