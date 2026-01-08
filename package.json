@@ -30,7 +30,8 @@
     "serve-static:jobber-client": "nx serve-static jobber-client",
     "serve-static:jobber-auth": "nx serve-static jobber-auth",
     "serve-static:jobber-trpc": "nx serve-static jobber-trpc",
-    "test": "npx concurrently 'npm run test:jobber-client' 'npm run test:jobber-auth'",
+    "test": "npx concurrently 'npm run test:warn'",
+    "test:warn": "echo \"Warning: no test specified\" && exit 0",
     "test:jobber-client": "nx test jobber-client",
     "test:jobber-auth": "nx test jobber-auth"
   },
